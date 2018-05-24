@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>list_product</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="">
+
+    <ion-list>
+
+      <ion-item *ngFor="let item of listproduct">
+        <p>ชื่อสินค้า : {{item.product_name}} </p>
+        <p>ประเภท : {{item.product_category}} </p>
+        <p>มาตรฐาน GMP : {{item.product_standard_GMP}}</p>
+        <p>เลข อย. :{{item.product_number}} </p>
+      </ion-item>
+
+    </ion-list>
+  </div>
+</ion-content>

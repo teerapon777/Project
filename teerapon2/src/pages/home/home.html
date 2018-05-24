@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>สืบค้นข้อมูลผลิตภัณฑ์</h2>
+  <form #myForm="ngForm" (ngSubmit)="select(myForm.value)">
+    <ion-item>
+      <ion-label color="primary" stacked>ใส่ชื่อสินค้า</ion-label>
+      <ion-input type="text" ngModel name="txt"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button large full>
+        <span>ค้นหา</span>
+      </button>
+    </ion-item>
+  </form>
+</ion-content>

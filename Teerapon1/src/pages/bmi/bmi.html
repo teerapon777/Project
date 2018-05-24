@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>คำนวณหาค่า BMI</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <form novalidate #myForm="ngForm" (ngSubmit)="cal(myForm.value)">
+    <ion-item>
+      <ion-label>
+        <ion-icon name="ios-bicycle"></ion-icon> น้ำหนัก (กิโลกรัม)
+      </ion-label>
+      <ion-input type="number" ngModel name="weight"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="ios-bicycle"></ion-icon> ส่วนสู่ง (เมตร)
+      </ion-label>
+      <ion-input type="number" ngModel name="height"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button [disabled]="myForm.invalid" ion-button large full>
+        <span> . . คำนวณ . .</span>
+      </button>
+    </ion-item>
+  </form>
+</ion-content>
